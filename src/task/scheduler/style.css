@@ -1,0 +1,24 @@
+
+
+.left-pane{
+    -fx-background-color: white;
+    -fx-border-width: 0 0 0 2px;
+    -fx-border-color: black;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 5, 0, 0, 0); /* Box shadow */
+}
+
+.left-pane-nav:hover{   
+    -fx-background-color: gray;
+}
+
+.pane{
+    
+    -fx-background-radius: 5px;
+    -fx-background-color: #ffffff; /* Set your background color */
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 10, 0, 0, 0); /* Box shadow */
+}
+
+.button-1{
+    -fx-background-color: #009dff;
+    -fx-text-fill: white;
+}

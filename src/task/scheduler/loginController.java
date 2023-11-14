@@ -4,7 +4,6 @@ import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -15,35 +14,60 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-
 public class loginController implements Initializable{
-      
-    /**
-     * Initializes the controller class.
-     */
-    
-    
-    
-    
-    
     
     @FXML
-    private Button loginBtn;
+    private Label  aPLbl1, aPLbl2;
+  
+    @FXML
+    private Button loginBtn, registerLbl, loginLbl, loginLbl1, proceedBtn;
 
     @FXML
     private AnchorPane main_form;
-
+    
+    @FXML
+    private AnchorPane anchorPane1, anchorPane2, anchorPane3;
+    
+    
     @FXML
     private PasswordField passwordField;
 
     @FXML
-    private TextField usernameField;
+    private TextField usernameField, emailField, emailField1;
 
+      public void switchForm(ActionEvent event){
+          if(event.getSource() == registerLbl) {
+              anchorPane2.setVisible(true);
+              aPLbl1.setVisible(true);
+              aPLbl2.setVisible(true);
+              loginLbl.setVisible(true);
+              anchorPane1.setVisible(false);
+            } else if(event.getSource() == loginLbl && event.getSource() == loginLbl1){
+          
+             anchorPane2.setVisible(false);
+              aPLbl1.setVisible(false);
+              aPLbl2.setVisible(false);
+              loginLbl.setVisible(false);
+              anchorPane1.setVisible(true);
+      }
+      }
+      
+      public void proceed(ActionEvent event){
+          if(event.getSource() == proceedBtn){
+              anchorPane1.setVisible(false);
+              anchorPane2.setVisible(false);
+              anchorPane3.setVisible(true);
+          }
+      }
+          
+  
+    
     
     // databse
     private Connection connect;
@@ -100,6 +124,7 @@ public class loginController implements Initializable{
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+       
     }    
 
     

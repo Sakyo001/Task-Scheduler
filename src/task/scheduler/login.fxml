@@ -9,8 +9,7 @@
 
 <AnchorPane id="AnchorPane" fx:id="main_panel" prefHeight="600.0" prefWidth="650.0" style="-fx-background-color: #ff6289;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="task.scheduler.loginController">
    <children>
-      <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
-      <AnchorPane id="login-pane" layoutX="75.0" layoutY="79.0" prefHeight="474.0" prefWidth="500.0" style="-fx-background-color: white;">
+      <AnchorPane id="login-pane" fx:id="anchorPane1" layoutX="71.0" layoutY="73.0" prefHeight="474.0" prefWidth="500.0" style="-fx-background-color: white;">
          <children>
             <Label layoutX="190.0" layoutY="27.0" prefHeight="31.0" prefWidth="120.0" text="Welcome!">
                <font>
@@ -39,12 +38,74 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="139.0" layoutY="361.0" text="Register" textFill="#3700ff">
+            <PasswordField fx:id="passwordField" layoutX="41.0" layoutY="224.0" prefHeight="43.0" prefWidth="415.0" />
+            <Button fx:id="registerLbl" layoutX="144.0" layoutY="359.0" mnemonicParsing="false" onAction="#switchForm" style="-fx-background-color: none; -fx-text-fill: blue;" text="Register" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="anchorPane2" layoutX="71.0" layoutY="73.0" prefHeight="474.0" prefWidth="500.0" style="-fx-background-color: white;" visible="false">
+         <children>
+            <Label fx:id="aPLbl1" layoutX="120.0" layoutY="27.0" prefHeight="31.0" prefWidth="272.0" text="Get productive ahead!">
+               <font>
+                  <Font name="Segoe UI Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="aPLbl2" layoutX="150.0" layoutY="64.0" text="By creating your account!" textFill="#ae9090">
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="42.0" layoutY="361.0" style="-fx-background-color: none;" text="Have an Account?" textFill="#948b8b">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <PasswordField fx:id="passwordField" layoutX="41.0" layoutY="224.0" prefHeight="43.0" prefWidth="415.0" />
+            <Button fx:id="loginLbl" layoutX="152.0" layoutY="359.0" mnemonicParsing="false" onAction="#switchForm" style="-fx-background-color: none; -fx-text-fill: blue;" text="Login" />
+            <Label layoutX="42.0" layoutY="109.0" text="Email">
+               <font>
+                  <Font name="Segoe UI Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="emailField" layoutX="41.0" layoutY="133.0" prefHeight="43.0" prefWidth="415.0" />
+            <Label layoutX="42.0" layoutY="201.0" text="Confirm Email">
+               <font>
+                  <Font name="Segoe UI Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="emailField1" layoutX="41.0" layoutY="224.0" prefHeight="43.0" prefWidth="415.0" />
+            <Button fx:id="proceedBtn" layoutX="41.0" layoutY="295.0" mnemonicParsing="false" onAction="#proceed" prefHeight="43.0" prefWidth="415.0" style="-fx-background-color: blue;" text="Proceed" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="anchorPane3" layoutX="71.0" layoutY="73.0" prefHeight="474.0" prefWidth="500.0" style="-fx-background-color: white;" visible="false">
+         <children>
+            <Label fx:id="aPLbl11" layoutX="130.0" layoutY="27.0" prefHeight="31.0" prefWidth="272.0" text="You're almost there!">
+               <font>
+                  <Font name="Segoe UI Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="aPLbl21" layoutX="132.0" layoutY="64.0" text="Create memorable password!" textFill="#ae9090">
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="42.0" layoutY="361.0" style="-fx-background-color: none;" text="Have an Account?" textFill="#948b8b">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="loginLbl1" layoutX="152.0" layoutY="359.0" mnemonicParsing="false" onAction="#switchForm" style="-fx-background-color: none; -fx-text-fill: blue;" text="Login" />
+            <Label layoutX="42.0" layoutY="109.0" text="Password">
+               <font>
+                  <Font name="Segoe UI Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="42.0" layoutY="201.0" text="Confirm password">
+               <font>
+                  <Font name="Segoe UI Bold" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="loginBtn11" layoutX="41.0" layoutY="295.0" mnemonicParsing="false" onAction="#loginAdmin" prefHeight="43.0" prefWidth="415.0" style="-fx-background-color: blue;" text="Proceed" textFill="WHITE" />
+            <PasswordField fx:id="passwordField1" layoutX="41.0" layoutY="133.0" prefHeight="43.0" prefWidth="415.0" />
+            <PasswordField fx:id="passwordField11" layoutX="41.0" layoutY="224.0" prefHeight="43.0" prefWidth="415.0" />
          </children>
       </AnchorPane>
    </children>
